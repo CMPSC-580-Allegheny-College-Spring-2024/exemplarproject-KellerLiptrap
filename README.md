@@ -5,11 +5,11 @@
 
 This repository contains student project materials, including project report, data, code, and references to literature for this departmentally-sponsored project. __As you complete each of the below sections in this document, please be sure to remove the preamble text so that it does not appear in your work.__ Please work with your first reader to answer any questions or concerns that you may have.
 
-## GitHub Handle: Add Your Name Here
+## GitHub Handle: kellerliptrap
 
-## Name: Add Your Name Here
+## Name: Keller Liptrap
 
-## Major: TODO (choose: CS, DS, INFM, SE)
+## Major: Computer Science
 
 ## Project Name: Enter The Name Of Your Project
 
