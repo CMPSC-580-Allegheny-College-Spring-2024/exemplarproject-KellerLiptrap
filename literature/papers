@@ -3,3 +3,8 @@ Automated fact checking: Task formulations, methods and future directions. arXiv
 https://arxiv.org/abs/1806.07687 
 
 Paper 1: Paper looks at the increase in interest of fact checking. Mentions several methods on how this is done natural language processing, machine learning, knowledge representation, databases, and journalism. This paper also contains methods and algorithms that can be used to set a basis for how to check facts.
+
+
+EURECOM, V.-P. H., Huynh, V.-P., Eurecom, EURECOM, P. P., Papotti, P., University, T., Massachusetts, U. of, Technology, I. of C., Institute, W. P., Research, A., LinkedIn, Kong, C. U. of H., & Metrics, O. M. A. (2019, November 1). A benchmark for fact checking algorithms built on knowledge bases: Proceedings of the 28th ACM International Conference on Information and Knowledge Management. ACM Conferences. https://dl.acm.org/doi/pdf/10.1145/3357384.3358036 
+
+Paper 2: Presnets algorithm baselines for how to do fact checking. Reinforcement of data training and how to do it.
