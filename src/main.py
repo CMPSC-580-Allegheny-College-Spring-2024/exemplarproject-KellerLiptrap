@@ -3,28 +3,6 @@ import spacy
 import os
 import streamlit as st
 
-
-# nlp = spacy.load("en_core_web_sm")
-
-
-# tree = ET.parse("PMC1999407.xml")  # Replace "your_xml_file.xml" with the path to your XML file
-# root = tree.getroot()
-
-
-# doc = nlp(ET.tostring(root, encoding='unicode'))
-# # for token in doc:
-# #     print(token.text)
-# nouns_only_text = ' '.join(token.text for token in doc if token.pos_ == "NOUN")
-
-
-# print(nouns_only_text)
-
-
-
-
-# Load English language mode
-
-
 # Load English language model
 nlp = spacy.load("en_core_web_sm")
 

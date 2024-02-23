@@ -1,44 +1,33 @@
-# Specify the path to the CSV file in another folder
+import unittest
+import xml.etree.ElementTree as ET
+import spacy
+import os
+from main import check_fact, extract_keywords
 
-# Open the CSV file
-def load_csv_files(file_paths):
-    """Load CSV files into memory and return a list of DataFrames."""
-    data = []
-    for file_path in file_paths:
-        with open(file_path, 'r') as file:
-            csvreader = csv.reader(file)
-            rows = []
-            for row in csvreader:
-                rows.append(row)
-            df = pd.DataFrame(rows)
-            data.append(df)
-    return data
+class TestCheckFact(unittest.TestCase):
 
-def fact_check(prompt, data):
-    """
-    Perform fact-checking based on the provided prompt and the data from CSV files.
-    """
-    # Implement your fact-checking logic here
-    # This can involve searching through the data for relevant information
-    # Compare the information found with the provided prompt
-    # Determine the veracity of the statement
+    def test_check_fact(self):
+        # Sample XML text containing a fact
+        xml_text = """
+                    <document>
+                        <text>Cats and dogs can fly.</text>
+                    </document>
+                   """
+        # Extracting keywords from the fact
+        fact_keywords = extract_keywords(xml_text)
 
-    # Return the result of the fact-checking process
-    pass
+        # Print extracted keywords for debugging
+        print("Extracted Keywords:", fact_keywords)
 
-def main():
-    # Load CSV files into memory
-    csv_files = ["oa_comm_txt.PMC009xxxxxx.baseline.2023-12-17.filelist.csv"]  # Add your CSV file paths here
-    data = load_csv_files(csv_files)
+        # Test with the sample XML text and extracted keywords
+        result = check_fact(xml_text, fact_keywords)
 
-    # Get input prompt from the user
-    prompt = input("Enter the statement to fact-check: ")
+        # Print result of similarity comparison for debugging
+        print("Result of Similarity Comparison:", result)
 
-    # Perform fact-checking
-    result = fact_check(prompt, data)
+        # Assert that the result should be True since all extracted keywords are present in the text
+        self.assertFalse(result)
 
-    # Print the result
-    print(result)
+if __name__ == '__main__':
+    unittest.main()
 
-if __name__ == "__main__":
-    main()
