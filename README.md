@@ -11,7 +11,7 @@ This repository contains student project materials, including project report, da
 
 ## Major: Computer Science
 
-## Project Name: Enter The Name Of Your Project
+## Project Name: Fact or Fiction?
 
 Here, think of an interesting name of the work that bring a freshness and excitement to the area of this project. Consider using a name that carries some information about what the project and provides some hint at what the project does without being too wordy.
 
@@ -20,6 +20,8 @@ Here, think of an interesting name of the work that bring a freshness and excite
 ## Overview
 
 TODO (250 words minimum): Discuss the overview of the project using and building on the project description provided by the department. In this section, a concise summary is discussed of the study's key elements, offering the reader a quick understanding of the research's scope and goals. The section continues to outline the main topics, research questions, hypotheses, and /or theories in a clear and meaningful language to provide a type of roadmap for the reader to navigate the forthcoming details of the project. This section also needs to motivate the project by providing context for the study, outlining the current state of knowledge in the field, and highlighting any gaps or limitations in existing research. The section serves as a foundational guide that enables the reader to grasp the context of the study, in addition to its structure, before moving into a more technically-based discussion in the following sections of the article. In short, the "Overview" section needs to answer the `what` and `why` questions, that is `what is the project?` and `why is the project important?`
+
+This project is a part of the data science exemplar project. The base overview of what the project is aiming to do is to allow a user to put in a fact of their choice for example the user may put in "dogs can fly". The program will have access to a large group of papers that will be looked through for this fact. IF the fact is found then the user we be told yes their entry is a fact and if the user input is not found then the program will tell the user that the fact they wanted to verify is not a fact. This project can be useful in several cases. Currently, in social media, there continues to be factual info and news being passed on as fake. Using such a program can be very useful. A caveat to this project is it requires a user to input a fact they want to check but in a later version of this ideally it just automatically checks for facts on something like Twitter/X for users' posts and checks if it's a fact. Companies might find a more complex version of this type of project useful. Implementing this into their social media company can help users determine what info they should believe. Giving notifications in conjunction with a post that some info is fake can improve the quality of life for the users and the owners. Overall the fact checker can allow users to check their desired fact with a large database of academic papers and get feed back to whether or not this entry is true.
 
 ## Literature Review
 
