@@ -31,7 +31,7 @@ There are many methods to determine whether a fact is true or not but this proje
 
 TODO: The result of your work will be the delivery of some type of artifact which will likely contain software programming solutions (i.e., Python code, HTML pages, or similar). To allow the user to experience and execute your artifact, you must first explain how to set up the initial conditions to run or use the artifact. Be sure to offer explicit details and instructions regarding the installation of the necessary foundational libraries, drivers, external software projects, containers and similar types of tertiary software which are involved in executing your artifact. Once these initial software installations have been completed, then you are asked to offer the necessary instructions for actually executing the artifact. For this, please provide all command line parameters or associated bash commands for execution. Please remember that users are unwilling to "figure-out" how to use code in absence of the essential instructions concerning the execution of project artifacts.
 
-To run this code you will require a couple of install for the project to funciton as intended. Below is what is needed and the command to install the requirments.
+To run this code you will require a couple of install for the project to funciton as intended. Below is what is needed and the command to install the requirments. This should be done after cloning the repository.
 | Requirement             | Description                                                                                                          |
 |-------------------------|----------------------------------------------------------------------------------------------------------------------|
 | Python                  | Version 3.6 or later.                                                                                                |
@@ -40,7 +40,10 @@ To run this code you will require a couple of install for the project to funcito
 | en_core_web_sm          |  `python -m spacy download en_core_web_sm`.                            |
 | os                      | Part of Python's standard library. No separate installation needed.                                                  |
 | streamlit               | `pip install streamlit` This is the dasbaord section of the project                        |
-| XML Files               |       |
+| XML Files               |    https://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_bulk/oa_noncomm/xml/oa_noncomm_xml.PMC001xxxxxx.baseline.2023-12-18.tar.gz   This is the download to the xml files that you will need to path to  |
+
+The path to the xml files will be contained in the main in this line of code `xml_dir = ""`. Between quations is where you will need to provide your path to the download xml file database. To run the program you must use this command `streamlit run main.py`. This will create a local host where the dashbaord will apear and your desired fact can be inputted.
+
 
 
 ## Results and Outcomes
