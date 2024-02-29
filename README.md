@@ -21,9 +21,9 @@ This project is a part of the data science exemplar project. The base overview o
 
 ## Literature Review
 
-TODO: Conduct a literature review by describing relevant work related to the project and hence providing an overview of the state of the art in the area of the project. This section serves to contextualize the study within the existing body of literature, presenting a thorough review of relevant prior research and scholarly contributions. In clear and meaningful language, this section aims to demonstrate the problems, gaps, controversies, or unanswered questions that are associated with the current understanding of the topic. In addition, this section serves to highlight the current study's unique contribution to the field. By summarizing and critiquing existing works, this section provides a foundation for readers to appreciate the novelty and significance of the study about the broader academic discourse. The "Literature Review" section further contributes to the `Why is the project important?` question. The number of scholarly works included in the literature review may vary depending on the project.
-
 The paper I looked at about this project's topic of fact-checking is titled Automated `Fact Checking: Task Formulations, methods, and future directions`. This paper is written by `James Thorne` and `Andreas Vlachos` who are both in the Department of Computer Science at the University of Sheffield in the UK. This paper discusses the growing need for fact-checking online especially since true and false information can reach a large audience with ease. To do this there is an uptaking in the need for automated fact-checking processes. To do this the authors investigate the use of natural language processing and the automation of factcheking. They aim to test this mostly in the journalism area. They follow this by explaining the various inputs into a fact-checking machine. There are two that stood out to me for the use of this project Subject-Predicate-Object Triples and Textual Claims. Where textual claims are the users put into the program they want to see if this claim is true or false and Subject-Predicate-Object Triples is are large database of papers and known statements that are true. This paper pointed out some ways in which we can do fact checking but not without issues. Some evidence will be hard to verify and may still need human interaction to determine if it is true or false. The author's overall consensus is there are still strides that need to be taken in the form of automated fact-checking but it can still be viable. 
+
+Link: https://arxiv.org/pdf/1806.07687.pdf
 
 ## Methods
 
@@ -48,7 +48,7 @@ The path to the xml files will be contained in the main in this line of code `xm
 
 ## Results and Outcomes
 
-TODO: Discuss the outcomes of your project in this section. Depending on the project type, the presented results and outcomes will vary. In some projects, you will be asked to present a theoretical analysis, and in others your experimental study and its results. In this section, you are also to demonstrate an enhanced version of your artifact by showing its capabilities and applications, in light of the evaluation metrics for assessing the artifact
+After building and running my tool to fact-check a user input to be true or false it does what it is intended to do but there can be some improvements done. Generally, the user's experience is good when running this program to find whether the input is a fact or not. The issue falls into the runtime of the program. The database that the fact is compared to is large. The user's input is broken down and used for a threshold of similarity by looping through each line in each file. Based on testing input if it is a fact then the program will run faster depending on where the file is located in the database due to the program stopping when the fact is found and displaying it. If a fact is not true the runtime is long.
 
 ---
 
