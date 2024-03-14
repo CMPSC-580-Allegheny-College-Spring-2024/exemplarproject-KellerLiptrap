@@ -1,40 +1,54 @@
+[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-24ddc0f5d75046c5622901739e7c5dd533143b0c8e959d652212380cedb1ea36.svg)](https://classroom.github.com/a/Y4rZMh1t)
 # Junior Seminar (CMPSC 580) Exemplar Project Repository
 
 ## Semester: Spring 2024
 
 This repository contains student project materials, including project report, data, code, and references to literature for this departmentally-sponsored project. __As you complete each of the below sections in this document, please be sure to remove the preamble text so that it does not appear in your work.__ Please work with your first reader to answer any questions or concerns that you may have.
 
-## GitHub Handle: Add Your Name Here
+## GitHub Handle: kellerliptrap
 
-## Name: Add Your Name Here
+## Name: Keller Liptrap
 
-## Major: TODO (choose: CS, DS, INFM, SE)
+## Major: Computer Science
 
-## Project Name: Enter The Name Of Your Project
-
-Here, think of an interesting name of the work that bring a freshness and excitement to the area of this project. Consider using a name that carries some information about what the project and provides some hint at what the project does without being too wordy.
+## Project Name: Fact or Fiction?
 
 ---
 
 ## Overview
 
-TODO (250 words minimum): Discuss the overview of the project using and building on the project description provided by the department. In this section, a concise summary is discussed of the study's key elements, offering the reader a quick understanding of the research's scope and goals. The section continues to outline the main topics, research questions, hypotheses, and /or theories in a clear and meaningful language to provide a type of roadmap for the reader to navigate the forthcoming details of the project. This section also needs to motivate the project by providing context for the study, outlining the current state of knowledge in the field, and highlighting any gaps or limitations in existing research. The section serves as a foundational guide that enables the reader to grasp the context of the study, in addition to its structure, before moving into a more technically-based discussion in the following sections of the article. In short, the "Overview" section needs to answer the `what` and `why` questions, that is `what is the project?` and `why is the project important?`
+This project is a part of the data science exemplar project. The base overview of what the project is aiming to do is to allow a user to put in a fact of their choice for example the user may put in "dogs can fly". The program will have access to a large group of papers that will be looked through for this fact. IF the fact is found then the user we be told that their entry is a fact and if the user input is not found then the program will tell the user that the fact they wanted to verify is not a fact. This project can be useful in several cases. Currently, in social media, there continues to be factual info and news being passed on as fake. Using such a program can be very useful. A caveat to this project is it requires a user to input a fact they want to check but in a later version of this ideally it just automatically checks for facts on something like Twitter/X for users' posts and checks if it's a fact. Companies might find a more complex version of this type of project useful. Implementing this into their social media company can help users determine what info they should believe. Giving notifications in conjunction with a post that some info is fake can improve the quality of life for the users and the owners. Overall the fact checker can allow users to check their desired fact with a large database of academic papers and get feedback back to whether or not this entry is true.
 
 ## Literature Review
 
-TODO: Conduct literature review by describing relevant work related to the project and hence providing an overview of the state of the art in the area of the project. This section serves to contextualize the study within the existing body of literature, presenting a thorough review of relevant prior research and scholarly contributions. In clear and meaningful language, this section aims to demonstrate the problems, gaps, controversies, or unanswered questions that are associated with the current understanding of the topic. In addition, this section serves to highlight the current study's unique contribution to the field. By summarizing and critiquing existing works, this section provides a foundation for readers to appreciate the novelty and significance of the study in relation to the broader academic discourse. The "Literature Review" section further contributes to the `why is the project important?` question. The number of scholarly work included in the literature review may vary depending on the project.
+The paper I looked at about this project's topic of fact-checking is titled Automated `Fact Checking: Task Formulations, methods, and future directions`. This paper is written by `James Thorne` and `Andreas Vlachos` who are both in the Department of Computer Science at the University of Sheffield in the UK. This paper discusses the growing need for fact-checking online especially since true and false information can reach a large audience with ease. To do this there is an uptaking in the need for automated fact-checking processes. To do this the authors investigate the use of natural language processing and the automation of factcheking. They aim to test this mostly in the journalism area. They follow this by explaining the various inputs into a fact-checking machine. There are two that stood out to me for the use of this project Subject-Predicate-Object Triples and Textual Claims (Thorne & Vlachos, 2018). Where textual claims are the users put into the program they want to see if this claim is true or false and Subject-Predicate-Object Triples is are large database of papers and known statements that are true. This paper pointed out some ways in which we can do fact checking but not without issues. Some evidence will be hard to verify and may still need human interaction to determine if it is true or false. The author's overall consensus is there are still strides that need to be taken in the form of automated fact-checking but it can still be viable. 
+
+Thorne, J., & Vlachos, A. (2018). Automated Fact Checking: Task formulations, methods and future directions. https://arxiv.org/pdf/1806.07687.pdf 
 
 ## Methods
 
-TODO: Discuss the methods of the project to be able to answer the `how` question (`how was this project completed?`). The methods section in an academic research outlines the specific procedures, techniques, and methodologies employed to conduct the study, offering a transparent and replicable framework for the research. It details the resources behind the work, in terms of, for example, the design of the algorithm and the experiment(s), data collection methods, applied software libraries, required tools, the types of statistical analyses and models which are applied to ensure the rigor and validity of the study. This section provides clarity for other researchers to understand and potentially replicate the study, contributing to the overall reliability and credibility of the research findings.
+There are many methods to determine whether a fact is true or not but this project uses natural language processing. This project uses the library `spaCy` to do all the language processing. To get started you'll need `nlp = spacy.load("en_core_web_sm")`. This simply loads the pre-trained English language model within spaCy. The first step in coding to start the language processing is to get the database of papers. These papers are XML files so they need to be parsed through and converted into text that the program can read. After we get all the files read and inputted into the program we need to take all of the text and run it through the natural language database that we brought in earlier with the designated variable of nlp. An important detail for this project is how to interpret the user's input. To do this, we use spaCy to get the user's input's nouns, verbs, adjectives, and adverbs. This allows us to get the key terms and shorten the input to check for facts. To determine a fact the program goes line by line in each of the papers within the file and checks for similarity which is built into the spaCy library. In addition to this, there is a similarity threshold to determine how close together the words are to help determine a fact. A user can use this dashboard to compare a statement they want to confirm is a fact or not to a large database of scholarly papers.
 
 ## Using the Artifact
 
-TODO: The result of your work will be the delivery of some type of artifact which will likely contain software programming solutions (i.e., Python code, HTML pages, or similar). To allow the user to experience and execute your artifact, you must first explain how to set up the initial conditions to run or use the artifact. Be sure to offer explicit details and instructions regarding the installation of the necessary foundational libraries, drivers, external software projects, containers and similar types of tertiary software which are involved in executing your artifact. Once these initial software installations have been completed, then you are asked to offer the necessary instructions for actually executing the artifact. For this, please provide all command line parameters or associated bash commands for execution. Please remember that users are unwilling to "figure-out" how to use code in absence of the essential instructions concerning the execution of project artifacts.
+To run this code you will require a couple of installs for the project to function as intended. Below is what is needed and the command to install the requirements. This should be done after cloning the repository.
+| Requirement             | Description                                                                                                          |
+|-------------------------|----------------------------------------------------------------------------------------------------------------------|
+| Python                  | Version 3.6 or later.                                                                                                |
+| xml.etree.ElementTree  | Part of Python's standard library. No separate installation is needed.                                                  |
+| spacy                   | `pip install spacy`.                                                |
+| en_core_web_sm          |  `python -m spacy download en_core_web_sm`.                            |
+| os                      | Part of Python's standard library. No separate installation is needed.                                                  |
+| streamlit               | `pip install streamlit` This is the dashboard section of the project                        |
+| XML Files               |    https://ftp.ncbi.nlm.nih.gov/pub/pmc/oa_bulk/oa_noncomm/xml/oa_noncomm_xml.PMC001xxxxxx.baseline.2023-12-18.tar.gz   This is the download to the xml files that you will need to path to  |
+
+The path to the xml files will be contained in the main in this line of code `xml_dir = ""`. Between quotations is where you will need to provide your path to the download xml file database. To run the program you must use this command `streamlit run main.py`. This will create a local host where the dashboard will appear and your desired fact can be inputted.
+
+
 
 ## Results and Outcomes
 
-TODO: Discuss the outcomes of your project in this section. Depending on the project type, the presented results and outcomes will vary. In some projects, you will be asked to present a theoretical analysis, and in others your experimental study and its results. In this section, you are also to demonstrate an enhanced version of your artifact by showing its capabilities and applications, in light of the evaluation metrics for assessing the artifact
+After building and running my tool to fact-check a user input to be true or false it does what it is intended to do but there can be some improvements done. Generally, the user's experience is good when running this program to find whether the input is a fact or not. The issue falls into the runtime of the program. The database that the fact is compared to is large. The user's input is broken down and used for a threshold of similarity by looping through each line in each file. Based on testing input if it is a fact then the program will run faster depending on where the file is located in the database due to the program stopping when the fact is found and displaying it. If a fact is not true the runtime is long. For the user running the program, they will have a text box to enter their fact in the dashboard. Once the fact is entered they flick a button and the program begins. Each file will be displayed as the fact is checked. IF the fact is found it will display which file it is found in.
 
 ---
 
